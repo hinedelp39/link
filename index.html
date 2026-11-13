@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Please Wait...</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #101828;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .loader-container {
+      text-align: center;
+    }
+
+    .loader {
+      width: 55px;
+      height: 55px;
+      border: 5px solid #344054;
+      border-top: 5px solid #ffffff;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 20px;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: #98a2b3;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="loader-container">
+    <div class="loader"></div>
+    <h2>Please wait...</h2>
+    <p>Redirecting you to the website</p>
+  </div>
+
+  <script>
+    const destinationURL = "https://birbb.site";
+
+    setTimeout(() => {
+      window.location.replace(destinationURL);
+    }, 2500);
+  </script>
+
+</body>
+</html>
